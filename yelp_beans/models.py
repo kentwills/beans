@@ -15,7 +15,7 @@ class User(ndb.Model):
         - photo_url:        url to user photo
         - terminated:       TRUE when user has left the company
     """
-    email = ndb.StringProperty(required=True)
+    email = ndb.StringProperty()
     first_name = ndb.StringProperty(indexed=False)
     last_name = ndb.StringProperty(indexed=False)
     photo_url = ndb.TextProperty()
