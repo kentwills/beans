@@ -1,0 +1,15 @@
+*.swp
+*~
+.DS_Store
+.cache/
+.coverage
+.idea/
+.node-version
+/lib/
+config.yaml
+dist/
+index.yaml
+node_modules/
+npm-debug.log
+tests/.cache
+touch.webpack.*
