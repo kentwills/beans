@@ -1,5 +1,5 @@
-import MetricsReducer from '../../../js/reducers/metrics';
-import { FETCH_METRICS } from '../../../js/actions';
+import MetricsReducer from '../../reducers/metrics';
+import { FETCH_METRICS } from '../../actions';
 
 
 describe('MetricsReducer', () => {

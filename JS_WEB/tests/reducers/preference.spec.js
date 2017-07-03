@@ -1,5 +1,5 @@
-import PrefReducer from '../../../js/reducers/preferences';
-import { FETCH_PREFS } from '../../../js/actions';
+import PrefReducer from '../../reducers/preferences';
+import { FETCH_PREFS } from '../../actions';
 
 
 describe('PrefReducer', () => {

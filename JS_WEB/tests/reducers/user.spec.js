@@ -1,5 +1,5 @@
-import UserReducer from '../../../js/reducers/user';
-import { FETCH_USER } from '../../../js/actions';
+import UserReducer from '../../reducers/user';
+import { FETCH_USER } from '../../actions';
 
 
 describe('UserReducer', () => {
