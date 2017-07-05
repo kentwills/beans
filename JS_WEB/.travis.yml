@@ -1,0 +1,3 @@
+language: js
+install: npm install
+script: npmt test
