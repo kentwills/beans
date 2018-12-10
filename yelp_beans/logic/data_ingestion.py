@@ -39,9 +39,11 @@ class DataIngestion(object):
             data['email'] = data['metadata']['work_email']
             # TODO fix once we find a solution for photos
             data['photo_url'] = s3_data[data['email']].get('photo_url', DEFAULT_AVATAR)
+            team = data['metadata']['team'] 
+            department = team if team != '-' else data['metadata']['supervisory_organization']
             data['metadata'].update({
                 'supervisory_organization': data['metadata']['supervisory_organization'],
-                'department': data['metadata']['supervisory_organization'],
+                'department': department, 
                 'company_profile_url': data['metadata'].get('yelp_url'),
                 'username': data['email'].split('@')[0]
             })
