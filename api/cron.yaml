@@ -22,3 +22,9 @@ cron:
   schedule: every wednesday 11:00
   timezone: America/Los_Angeles
   target: api
+
+- description: calculate meetings
+  url: /tasks/update_meetings
+  schedule: every wednesday 11:00
+  timezone: America/Los_Angeles
+  target: api

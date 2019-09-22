@@ -3,6 +3,7 @@ Click==7.0
 decorator==4.4.0
 Flask==1.1.1
 Flask-API-Utils==1.0.2
+google-cloud-storage==1.19.1
 httplib2==0.13.1
 itsdangerous==1.1.0
 Jinja2==2.10.1

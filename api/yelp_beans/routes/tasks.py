@@ -93,3 +93,22 @@ def send_match_emails():
         logging.info(matches)
         send_batch_meeting_confirmation_email(matches, spec)
     return "OK"
+
+
+@tasks.route('/update_meetings', methods=['GET'])
+def calculate_meetings():
+    from google.cloud import storage
+    client = storage.Client()
+    bucket = client.get_bucket('yelp-beans.appspot.com')
+    import json
+    a = {"a": "b"}
+    upload_blob("test_data.json", json.dumps(a), bucket)
+    blob = bucket.get_blob('test_data.json')
+    print(blob.download_as_string())
+
+
+def upload_blob(file_name, data, bucket):
+    """Uploads a file to the bucket."""
+    from google.cloud.storage import Blob
+    blob = Blob(file_name, bucket)
+    blob.upload_from_string(data)

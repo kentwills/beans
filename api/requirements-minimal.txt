@@ -1,6 +1,7 @@
 boto
 Flask
 flask-api-utils
+google-cloud-storage
 httplib2
 networkx
 pytz
