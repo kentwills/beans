@@ -1,8 +1,8 @@
 boto
-googleapis_common_protos
-google-cloud-ndb
 Flask
 flask-api-utils
+google-cloud-ndb
+googleapis_common_protos
 httplib2
 networkx
 pytz
