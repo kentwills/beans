@@ -11,7 +11,6 @@ from datetime import datetime
 import mock
 import pytest
 from google.cloud import ndb
-from google.cloud import testbed
 from pytz import timezone
 from pytz import utc
 from yelp_beans import send_email
@@ -58,10 +57,6 @@ def sendgrid_mock():
 
 @pytest.fixture
 def minimal_database():
-    my_testbed = testbed.Testbed()
-    my_testbed.activate()
-    my_testbed.init_datastore_v3_stub()
-    my_testbed.init_memcache_stub()
     # Clear ndb's in-context cache between tests.
     ndb.get_context().clear_cache()
 

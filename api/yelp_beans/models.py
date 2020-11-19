@@ -16,8 +16,8 @@ class User(ndb.Model):
         - terminated:       TRUE when user has left the company
     """
     email = ndb.StringProperty()
-    first_name = ndb.StringProperty(indexed=False)
-    last_name = ndb.StringProperty(indexed=False)
+    first_name = ndb.StringProperty()
+    last_name = ndb.StringProperty()
     photo_url = ndb.TextProperty()
     metadata = ndb.JsonProperty()
     terminated = ndb.BooleanProperty(default=False, required=True)

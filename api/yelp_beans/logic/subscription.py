@@ -7,7 +7,6 @@ from datetime import datetime
 from datetime import timedelta
 
 from google.cloud import ndb
-from google.cloud.db import NeedIndexError
 from pytz import utc
 from yelp_beans.models import MeetingSpec
 from yelp_beans.models import MeetingSubscription
@@ -124,13 +123,10 @@ def store_specs_from_subscription(subscription_key, week_start, specs):
     """
     Idempotent function to store meeting specs for this week.
     """
-    try:
-        current_specs = MeetingSpec.query(
-            MeetingSpec.meeting_subscription == subscription_key,
-            MeetingSpec.datetime > week_start
-        ).fetch()
-    except NeedIndexError:
-        current_specs = []
+    current_specs = MeetingSpec.query(
+        MeetingSpec.meeting_subscription == subscription_key,
+        MeetingSpec.datetime > week_start
+    ).fetch()
 
     if current_specs:
         return
