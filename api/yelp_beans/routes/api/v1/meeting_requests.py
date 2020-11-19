@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 from flask import Blueprint
 from flask import jsonify
 from flask import request
-from google.appengine.ext import ndb
+from google.cloud import ndb
 from yelp_beans.logic.user import get_user
 from yelp_beans.models import MeetingRequest
 

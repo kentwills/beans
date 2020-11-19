@@ -6,8 +6,8 @@ from __future__ import unicode_literals
 from datetime import datetime
 from datetime import timedelta
 
-from google.appengine.ext import ndb
-from google.appengine.ext.db import NeedIndexError
+from google.cloud import ndb
+from google.cloud.db import NeedIndexError
 from pytz import utc
 from yelp_beans.models import MeetingSpec
 from yelp_beans.models import MeetingSubscription

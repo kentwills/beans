@@ -8,7 +8,7 @@ import logging
 from flask import Blueprint
 from flask import jsonify
 from flask import request
-from google.appengine.ext import ndb
+from google.cloud import ndb
 from yelp_beans.logic.subscription import filter_subscriptions_by_user_data
 from yelp_beans.logic.subscription import merge_subscriptions_with_preferences
 from yelp_beans.logic.user import add_preferences

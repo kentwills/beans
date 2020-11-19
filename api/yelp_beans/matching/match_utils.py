@@ -8,7 +8,7 @@ from collections import defaultdict
 from datetime import datetime
 from datetime import timedelta
 
-from google.appengine.ext import ndb
+from google.cloud import ndb
 from yelp_beans.logic.config import get_config
 from yelp_beans.models import Meeting
 from yelp_beans.models import MeetingParticipant

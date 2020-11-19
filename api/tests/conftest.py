@@ -10,8 +10,8 @@ from datetime import datetime
 
 import mock
 import pytest
-from google.appengine.ext import ndb
-from google.appengine.ext import testbed
+from google.cloud import ndb
+from google.cloud import testbed
 from pytz import timezone
 from pytz import utc
 from yelp_beans import send_email

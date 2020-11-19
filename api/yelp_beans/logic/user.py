@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 import logging
 
 from google.appengine.api import users as google_user_api
-from google.appengine.ext import ndb
+from google.cloud import ndb
 from yelp_beans.models import User
 from yelp_beans.models import UserSubscriptionPreferences
 

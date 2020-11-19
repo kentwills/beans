@@ -1,4 +1,6 @@
 boto
+googleapis_common_protos
+google-cloud-ndb
 Flask
 flask-api-utils
 httplib2

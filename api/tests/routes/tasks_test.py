@@ -3,7 +3,7 @@ from __future__ import absolute_import
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from google.appengine.ext import ndb
+from google.cloud import ndb
 from yelp_beans.models import MeetingSpec
 from yelp_beans.models import User
 from yelp_beans.models import UserSubscriptionPreferences
