@@ -5,17 +5,12 @@ from __future__ import unicode_literals
 
 import logging
 
-from google.appengine.api import users as google_user_api
 from google.cloud import ndb
 from yelp_beans.models import User
 from yelp_beans.models import UserSubscriptionPreferences
 
 
 def get_user(email=None):
-    if email is None:
-        current_user = google_user_api.get_current_user()
-        email = current_user.email()
-
     return User.query(User.email == email).get()
 
 
